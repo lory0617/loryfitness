@@ -629,6 +629,17 @@
           div.appendChild(resultDiv);
           div.appendChild(nameDiv);
           div.appendChild(quoteDiv);
+          if (s.link) {
+            const linkEl = document.createElement('a');
+            linkEl.href = s.link;
+            linkEl.target = '_blank';
+            linkEl.rel = 'noopener noreferrer';
+            linkEl.textContent = '📖 查看完整心得';
+            linkEl.style.cssText = 'display:inline-block;margin-top:1rem;color:var(--gold);text-decoration:none;font-size:0.85rem;letter-spacing:1px;transition:opacity 0.3s;';
+            linkEl.onmouseenter = () => linkEl.style.opacity = '0.7';
+            linkEl.onmouseleave = () => linkEl.style.opacity = '1';
+            div.appendChild(linkEl);
+          }
           storGrid.appendChild(div);
         });
 
