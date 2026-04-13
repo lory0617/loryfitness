@@ -643,6 +643,17 @@
           storGrid.appendChild(div);
         });
 
+        const ctaCard = document.createElement('div');
+        ctaCard.className = 'story-item reveal reveal-delay-3';
+        ctaCard.style.cssText = 'display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border-style:dashed;border-color:rgba(245,166,35,0.4);cursor:pointer;';
+        ctaCard.innerHTML = `
+          <div class="story-result" style="font-size:2.5rem;">?</div>
+          <div class="story-name">下一位就是你</div>
+          <div class="story-quote" style="font-style:normal;">等你一起加入後來分享！</div>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSf54JnRR67qNfatJKLpzxMyvhO2jPM5IEKTvfFiSFjffwqv6w/viewform" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:1rem;padding:0.6rem 1.8rem;background:var(--gold);color:var(--bg);border-radius:50px;text-decoration:none;font-weight:600;font-size:0.85rem;transition:all 0.3s;">立即諮詢</a>
+        `;
+        storGrid.appendChild(ctaCard);
+
         document.getElementById('milkyName').textContent = c.milky.name;
         document.getElementById('milkyDesc').textContent = c.milky.description;
         if (c.milky.instagram) {
